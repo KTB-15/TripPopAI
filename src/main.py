@@ -129,7 +129,7 @@ async def predict_travel(data: TravelData):
     pred_df.sort_values(by=['y_pred'], ascending=False, inplace=True)
 
     # 상위 10개 관광지 추출
-    top_10_places = pred_df.iloc[0:10]['VISIT_AREA_NM'].tolist()
-    # top_10_places = [int(place) for place in top_10_places if not pd.isna(place)]  # 정수로 변환하며 NaN 값 제거
+    top_10_places = pred_df.iloc[0:10]['VISIT_AREA_ID'].tolist()
+    top_10_places = [int(place) for place in top_10_places if not pd.isna(place)]  # 정수로 변환하며 NaN 값 제거
     # 결과 반환
     return {"recommended_places": top_10_places}
