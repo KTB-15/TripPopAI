@@ -10,7 +10,7 @@ from models import TravelInfo
 app = FastAPI()
 
 # 모델 불러오기
-model_path = "/Users/takhaseon/Documents/KTB/project/TripPopAI/data/travel_recommend_model.pkl"
+model_path = "/Users/takhaseon/Documents/KTB-15/TripPopAI/data/travel_recommend_model.pkl"
 with open(model_path, 'rb') as f:
     model = joblib.load(f)
 

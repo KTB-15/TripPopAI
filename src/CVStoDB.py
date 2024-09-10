@@ -4,7 +4,7 @@ from database import SessionLocal, engine
 from models import TravelInfo
 
 # CSV 파일 읽기
-file_path = '/Users/takhaseon/Documents/KTB/project/TripPopAI/data/Testset_travel_info.csv'
+file_path = '/Users/takhaseon/Documents/KTB-15/TripPopAI/data/Testset_travel_info.csv'
 df = pd.read_csv(file_path)
 
 
